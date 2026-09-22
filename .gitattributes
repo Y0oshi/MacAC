@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.ps1 text eol=lf
+*.png binary
+*.icns binary
+*.dylib binary
+*.spv binary
+*.dmg binary
+*.zip binary

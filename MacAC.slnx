@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MacAC.Core/MacAC.Core.csproj" />
+    <Project Path="src/MacAC.Sim/MacAC.Sim.csproj" />
+    <Project Path="src/MacAC.Client/MacAC.Client.csproj" />
+    <Project Path="src/MacAC.Forge/MacAC.Forge.csproj" />
+    <Project Path="src/MacAC.Dat/MacAC.Dat.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/ShaderCompiler/ShaderCompiler.csproj" />
+  </Folder>
+</Solution>
