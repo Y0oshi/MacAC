@@ -1,0 +1,67 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    # `secrets` cannot be read from a step `if`, so the ones that gate a step are lifted to job
+    # env and tested there. Missing signing or notarisation credentials skip those steps and still
+    # produce an unsigned build.
+    env:
+      MACOS_CERT_P12: ${{ secrets.MACOS_CERT_P12 }}
+      MACOS_CERT_PASSWORD: ${{ secrets.MACOS_CERT_PASSWORD }}
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Version from tag
+        id: v
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Import signing certificate
+        if: ${{ env.MACOS_CERT_P12 != '' }}
+        run: |
+          echo "$MACOS_CERT_P12" | base64 --decode > cert.p12
+          security create-keychain -p ci build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p ci build.keychain
+          security import cert.p12 -k build.keychain -P "$MACOS_CERT_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k ci build.keychain
+          echo "CODESIGN_IDENTITY=$(security find-identity -v -p codesigning build.keychain | grep -oE '"[^"]+"' | head -1 | tr -d '"')" >> "$GITHUB_ENV"
+
+      - name: Build release artifacts
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: ./tools/build-release.sh
+
+      - name: Notarize
+        if: ${{ env.CODESIGN_IDENTITY != '' && env.APPLE_ID != '' }}
+        run: |
+          for f in dist/release/*.dmg dist/release/*.zip; do
+            xcrun notarytool submit "$f" --apple-id "$APPLE_ID" --team-id "$APPLE_TEAM_ID" \
+              --password "$APPLE_APP_PASSWORD" --wait
+          done
+          xcrun stapler staple dist/release/*.dmg
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: MacAC ${{ steps.v.outputs.version }}
+          files: |
+            dist/release/*.dmg
+            dist/release/*.zip
+            dist/release/engine-manifest.json
+            dist/release/SHA256SUMS.txt

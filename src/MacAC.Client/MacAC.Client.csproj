@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>MacAC.Client</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BCnEncoder.Net.ImageSharp" />
+    <PackageReference Include="SixLabors.ImageSharp" />
+    <PackageReference Include="Arch" />
+    <PackageReference Include="Silk.NET.Vulkan" />
+    <PackageReference Include="Silk.NET.Vulkan.Extensions.KHR" />
+    <PackageReference Include="Silk.NET.Vulkan.Extensions.EXT" />
+    <PackageReference Include="Silk.NET.Windowing" />
+    <PackageReference Include="Silk.NET.Input" />
+    <PackageReference Include="Silk.NET.OpenAL" />
+    <PackageReference Include="Silk.NET.OpenAL.Extensions.Creative" />
+    <PackageReference Include="Silk.NET.OpenAL.Extensions.EXT" />
+    <PackageReference Include="Silk.NET.OpenAL.Soft.Native" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="StbTrueTypeSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Graphics\Shaders\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Graphics\Shaders\spv\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shell\assets\**\*.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Graphics\Icons\macac-client-16.png"
+                      LogicalName="MacAC.Client.Graphics.Icons.macac-client-16.png" />
+    <EmbeddedResource Include="Graphics\Icons\macac-client-32.png"
+                      LogicalName="MacAC.Client.Graphics.Icons.macac-client-32.png" />
+    <EmbeddedResource Include="Graphics\Icons\macac-client-48.png"
+                      LogicalName="MacAC.Client.Graphics.Icons.macac-client-48.png" />
+    <EmbeddedResource Include="Graphics\Icons\macac-client-256.png"
+                      LogicalName="MacAC.Client.Graphics.Icons.macac-client-256.png" />
+    <EmbeddedResource Include="Graphics\Icons\macac-client-512.png"
+                      LogicalName="MacAC.Client.Graphics.Icons.macac-client-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacAC.Core\MacAC.Core.csproj" />
+    <ProjectReference Include="..\MacAC.Sim\MacAC.Sim.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../MacAC.Dat/MacAC.Dat.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,373 @@
+{
+  "note": "Regenerate with tools/compile-shaders.ps1.",
+  "shaders": [
+    {
+      "name": "gateway_depth",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "a39ae9013d16f0634083be5f9495ae079b0aa21294643ea092a5614f3c171966",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "35594096aed3307474e73b058dd7060782294fcf0607e80d99a6a7e25bfab829",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "glow_blur",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "46605ebbd607ef994e9c56a7d015fdf193160faa3c32ce011cc3853e4521ec62",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "glow_downsample",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "e96efeafa8df48011412ade85f60af2aa668eeb20a180a6f1955d37934c3b83e",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "gpu_probe",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4017904c710ee4841476d805aa6542d9226b0ef448278ecd53c5492c677255be",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "f6788a765ce5131bdbb9583b11b332b24b170eaaced098bdfc80d42054a7ebc0",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "haze_volumes",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "6b3c2cdd8827c773e1dc67601863b723d12c4b99d4be965ee8fbed673a1b5f03",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "heavens",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "b6d4202d1cf7fd6e1af1a4b01be519ea2c03c7b707f0199714dadf14394ed296",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "0b23277239cee3a4ace2f250d85f80157b7cc6b73332b4cb6724c76da1cbd696",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "hud_text",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "3647c18600d57f85e2f37d38aab437bbcb7c51e17e86b4441a766424a07968c9",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "6097992dd68de15f251d62dafdda671cb59015d7abcbddeb807058e2685435de",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "land_haze",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "8ab0f858cf7d662c73aadd2bd3cfe1b0133f371e9799a0baa377436062561bd6",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "a65d04a3a32c8c3368b4c0857ebb2a7bf7e3c86e977a719e47ad55a4f981c392",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "land_lit",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "1d4a94cb381dc380612d7648b86d46b7f19865d2adf08d09b51ab839bb175b7b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "2a7c0bfdade603002bab2e77ad10cdba31e152661a7ba5d710f94dc893e01cfc",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "motes",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "c81a6b6b4c65423f1634ab8270b65a503eaf0001e6427d3e0f61c2170f55b0a5",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "3fb5254719c705ce94a02f909cfc187bdd11a540d5e69feece519cf73644f983",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "motes_mesh",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "51bee0e87007418641f06ff321e8d66241e60c00f53a0de68b1aaf71bbf97e37",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "999cd2027cc25d52e7606e84973769ed1ce46b749c646fb3ed0c281801d06e22",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "props_haze",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "94f329a9e9ecec4056a1080348d622bb043ec0ee55e1592fb036af4f8d75f570",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "65688036481273501ff1c007fdd1ac9e437308b761afe7846215b5eea4c6f62a",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "props_lit",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "5e8aa538b494a5f12577c1ad1eb41b68c6bf88c8b97670f8bc02908d17a00e09",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "60c43a18978998cf26d0b7d1022b28fa1c5efb857b6f35ea0a872ceb2ca4c219",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sun_occluder",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "376e17ef22c57777928de5142540757d95d6bd72f9e03779cd1fb37034655b67",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sun_shafts",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "80b157291f92edbc189e6c25698fd1cf1385f32f1e20f680d41212a0b90a404a",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_land",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "5d0d6e842ba5255b5e689c87d037d1ba8f36e77563e24c906e1e420323fad16f",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "428fafa26e7d36b1f6fb8b4fb720b2e9e74973c280f372df7cdb10766a4e0123",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_land_mv",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "cce1fe9d7e68c738e9570a286a764c448748e99d2cc6e570db281007e0bce707",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "428fafa26e7d36b1f6fb8b4fb720b2e9e74973c280f372df7cdb10766a4e0123",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_props_cutout",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "875183da9b06f73a3b5d67bad78c0ccbc7028b05eb62fff13bacd22a5ffc6451",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "220674d5bead483261626cf7470d7b854df974b9dc65ee8777d6d3a527302bc0",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_props_cutout_mv",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "a2c077a2ff7d11b647a8f7ee825d52b5c9646e7097972bd3ac38c0aa4e8dbe1c",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "220674d5bead483261626cf7470d7b854df974b9dc65ee8777d6d3a527302bc0",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_props_solid",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "6fd68e2bd36e9d666fe1acaeac51f58a73b4489d29c5af74de914efbeded4890",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "428fafa26e7d36b1f6fb8b4fb720b2e9e74973c280f372df7cdb10766a4e0123",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "sunshade_props_solid_mv",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "edf698961b8d02f708c8cce4f99bc903c66adb12a50f83a0e8247b5fb0d5b29c",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "428fafa26e7d36b1f6fb8b4fb720b2e9e74973c280f372df7cdb10766a4e0123",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "tonemap_filmic",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "4edc9d9221a2c870fdd0bede7e7a45fd1649509b5a7c054c03c7ca66dd43098b",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "827a1563d11740789595ae3da1460a26d8c65d4d1baa08d21994f7893b558181",
+          "compiled": true
+        }
+      ]
+    },
+    {
+      "name": "wire_lines",
+      "vulkanReady": true,
+      "stages": [
+        {
+          "stage": "vert",
+          "sourceSha256": "c012db2c38740ec16255f7f94b335e864729d3fa0d5679945744a22016890c62",
+          "compiled": true
+        },
+        {
+          "stage": "frag",
+          "sourceSha256": "0a40f0f2ff1ffce6e695e43dbbc692026492e67fa5a3862cb31dd24d4d6111bb",
+          "compiled": true
+        }
+      ]
+    }
+  ]
+}
